@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <link rel="shortcut icon" href="#">
+    <title>Mentor Snake</title>
+    <style>
+        body{
+            min-height: 100vh;
+            min-width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin : 0;
+            background-color: black;
+        }
+
+        #plateau{
+            background-color: grey;
+            width: 100vmin;
+            height: 100vmin;
+            display: grid;
+            grid-template-rows: repeat(30,1fr);
+            grid-template-columns: repeat(30,1fr);
+        }
+        .snake{
+            background-color: darkgreen;
+            border: 0.5px solid black;
+        }
+        .food{
+            background-color: yellow;
+            border: 0.5px solid black;
+
+        }
+    </style>
+    <script src="game.js" defer type="module"></script>
+</head>
+<body>
+    <div id="plateau"></div>
+</body>
