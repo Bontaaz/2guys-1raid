@@ -1,7 +1,7 @@
 import {getInputDir} from './input.js'
 
 
-export const Speed = 20
+export const Speed = 10
 let CorpsSerpent = 0
 export const serpentBody = [
      getRandomPosition(),
