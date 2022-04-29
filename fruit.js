@@ -1,11 +1,13 @@
-import {OnSerpentHead,ExpandSerpent} from "./snake.js"
+import {OnSerpentHead,ExpandSerpent,speed} from "./snake.js"
 
 export let fruit = getRandomFoodPosition()
 const AJOUT_CORPS = 2
-
+export let score = 0
 export function UpdateFruit(){
     if (OnSerpentHead(fruit)) {
         ExpandSerpent(AJOUT_CORPS)
+        score ++
+        speed += 2
     fruit = getRandomFoodPosition()
     }  
 }

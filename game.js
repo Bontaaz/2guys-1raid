@@ -1,6 +1,6 @@
-import {update as UpdateSnake , display as displaySnake, Speed,serpentBody, OnSerpent} from "./snake.js"
+import {update as UpdateSnake , display as displaySnake, speed,serpentBody, OnSerpent} from "./snake.js"
 
-import { UpdateFruit , draw as drawFood,fruit } from "./fruit.js"
+import { UpdateFruit ,score, draw as drawFood,fruit } from "./fruit.js"
 const plateauJeu = document.getElementById('plateau')
 let Time = 0
 let fruitO = false
@@ -17,7 +17,7 @@ export function main(temps){
     const secondsSinceLastRender = (temps - Time) / 1000
     
 
-    if(secondsSinceLastRender < 1/Speed){
+    if(secondsSinceLastRender < 1/speed){
         
     }else{
        
@@ -48,6 +48,7 @@ function update(){
 }
 function display(){
     plateauJeu.innerHTML = ''
+    document.getElementById("score").innerHTML= score
     displaySnake(plateauJeu)
     drawFood(plateauJeu)
 }
