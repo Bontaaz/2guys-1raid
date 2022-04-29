@@ -12,9 +12,13 @@ export function UpdateFruit(){
 
 export function draw(plateau){
         const fruits = document.createElement('div')
+        const ane = document.createElement('img')
+        ane.setAttribute("src", "static/ane.png")
         fruits.style.gridRowStart = fruit.y
         fruits.style.gridColumnStart = fruit.x
         fruits.classList.add('food')
+        fruits.setAttribute("id","food")
+        fruits.appendChild(ane)
         plateau.appendChild(fruits)
 }
 

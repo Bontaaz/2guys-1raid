@@ -49,9 +49,9 @@
         }
         .snake{
             z-index: 2;
-            background-color: darkgreen;
+            background-color: #DFD227;
             border: 0.5px solid black;
-            border-radius: 50%;
+            border-radius: 30%;
         }
         #head{
             display: flex;
@@ -64,13 +64,26 @@
             z-index: 3;
             
        }
-        .food{
-            z-index: 1;
-            background-color: yellow;
-            border: 0.5px solid black;
 
+
+        #food{
+            /* background-color: #8A7A66; */
+            z-index: 1;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* -webkit-box-shadow: 1px 2px 15px 5px #8A7A66; 
+            box-shadow: 1px 2px 15px 5px #8A7A66; */
         }
-    </style>
+        #food img {
+            position: absolute;
+            transform: scale(0.05);
+
+                    
+        }
+
+        </style>
     <script src="game.js" defer type="module"></script>
 </head>
 <body>
