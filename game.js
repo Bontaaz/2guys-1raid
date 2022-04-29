@@ -43,8 +43,8 @@ audio.play()
 function update(){
     UpdateFruit()
     UpdateSnake()
-    gameOver = deathOutGrid() || deathOnSerpent()
-    console.log(gameOver)
+    gameOver = deathOnSerpent()
+    
 }
 function display(){
     plateauJeu.innerHTML = ''
@@ -54,8 +54,8 @@ function display(){
 
 function deathOutGrid(){
         return (
-            serpentBody[0].x < 1 || serpentBody[0].x >= 30 ||
-            serpentBody[0].y < 1 || serpentBody[0].y >= 30
+            serpentBody[0].x < 1 || serpentBody[0].x >= 31 ||
+            serpentBody[0].y < 1 || serpentBody[0].y >= 31
           )
 }
 

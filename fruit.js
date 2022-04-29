@@ -1,7 +1,7 @@
 import {OnSerpentHead,ExpandSerpent} from "./snake.js"
 
 export let fruit = getRandomFoodPosition()
-const AJOUT_CORPS = 4
+const AJOUT_CORPS = 2
 
 export function UpdateFruit(){
     if (OnSerpentHead(fruit)) {
@@ -19,6 +19,5 @@ export function draw(plateau){
 }
 
 function getRandomFoodPosition(){
-
-    return ({ x:Math.floor(Math.random() * 30),y:Math.floor(Math.random() * 30)})
+    return ({ x:Math.ceil(Math.random() * 30),y:Math.ceil(Math.random() * 30)})
 }
