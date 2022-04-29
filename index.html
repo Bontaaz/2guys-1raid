@@ -12,9 +12,35 @@
             margin : 0;
             background-color: black;
         }
+        #menu{
+            position: absolute;
+            z-index: 4;
+            background-color: darkmagenta;
+            width: 100vw;
+            height:100vh;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap:30px;
+        }
 
+        #menu button{
+            width: 150px;
+            height:60px;
+            border-radius: 30px;
+            
+        }
+
+        #menu p {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 34px;
+            color : white;
+        }
         #plateau{
-            background-color: grey;
+            background-image: url("/static/swamp.jpg");
+            background-size: 100%  100%;
+            background-repeat: no-repeat;
             width: 100vmin;
             height: 100vmin;
             display: grid;
@@ -25,7 +51,19 @@
             z-index: 2;
             background-color: darkgreen;
             border: 0.5px solid black;
+            border-radius: 50%;
         }
+        #head{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #head img {
+            position: absolute;
+            transform: scale(0.15);
+            z-index: 3;
+            
+       }
         .food{
             z-index: 1;
             background-color: yellow;
@@ -36,5 +74,12 @@
     <script src="game.js" defer type="module"></script>
 </head>
 <body>
+    <div id="menu">
+        <p>HELP SHREK GET RID OF DONKEY</p>
+        <p>Select your gamemode :</p>
+        <button id="onePlayer">1 player</button>
+        <button id="twoPlayers">2 players</button>
+
+    </div>
     <div id="plateau"></div>
 </body>

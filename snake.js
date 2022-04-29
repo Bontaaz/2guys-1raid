@@ -1,7 +1,7 @@
 import {getInputDir} from './input.js'
 
 
-export const Speed = 15
+export const Speed = 20
 let CorpsSerpent = 0
 export const serpentBody = [
     { x : 10, y : 10},
@@ -21,12 +21,25 @@ export function update(){
 }
 
 export function display(plateau){
-    serpentBody.forEach(segment => {
-        const snakePart = document.createElement('div')
-        snakePart.style.gridRowStart = segment.y
-        snakePart.style.gridColumnStart = segment.x
-        snakePart.classList.add('snake')
-        plateau.appendChild(snakePart)
+    serpentBody.forEach((segment,index) => {
+        if(index==0){
+            const snakePart = document.createElement('div')
+            const head = document.createElement('img')
+            head.setAttribute("src", "static/shrek.png")
+            snakePart.style.gridRowStart = segment.y
+            snakePart.style.gridColumnStart = segment.x
+            snakePart.setAttribute("id","head")
+            snakePart.appendChild(head)
+            plateau.appendChild(snakePart)
+            
+            }else{
+                const snakePart = document.createElement('div')
+                snakePart.style.gridRowStart = segment.y
+                snakePart.style.gridColumnStart = segment.x
+                snakePart.classList.add('snake')
+                plateau.appendChild(snakePart)
+            }
+
 
     })
 }
