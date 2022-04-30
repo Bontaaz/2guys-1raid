@@ -25,6 +25,18 @@
             align-items: center;
             gap:30px;
         }
+        #menu2{
+            position: absolute;
+            z-index: 4;
+            background-color: darkmagenta;
+            width: 100vw;
+            height:100vh;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap:30px;
+        }
 
         #menu button{
             width: 150px;
@@ -38,8 +50,13 @@
             font-size: 34px;
             color : white;
         }
+        #menu2 p {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 34px;
+            color : white;
+        }
         #plateau{
-            background-image: url("/static/swamp.jpg");
+            background-image: url("./static/swamp.jpg");
             background-size: 100%  100%;
             background-repeat: no-repeat;
             width: 100vmin;
@@ -66,6 +83,24 @@
             
        }
 
+       .snake2{
+            z-index: 2;
+            background-color: #DFD227;
+            border: 0.5px solid black;
+            border-radius: 30%;
+        }
+        #head2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #head2 img {
+            position: absolute;
+            transform: scale(0.15);
+            z-index: 3;
+            
+       }
+
 
         #food{
             /* background-color: #8A7A66; */
@@ -84,17 +119,28 @@
         #popo{
             color : white
         }
+        #phrase{
+            color: white;
+            font-size: 34px;
+        }
         </style>
     <script src="game.js" defer type="module"></script>
 </head>
 <body>
+    <div id="menu2">
+      <div id="phrase"><span id="phrase"></span></div>  
+    </div>
     <div id="menu">
         <p>HELP SHREK GET RID OF DONKEY</p>
         <p>Select your gamemode :</p>
         <button id="onePlayer">1 player</button>
         <button id="twoPlayers">2 players</button>
+        <button id="touches">modifier commandes Player1</button>
+        <button id="touches2">modifier commandes Player2</button>
 
     </div>
-    <div id="popo">SCORE : <span id="score"></span></div>
+    <div id="popo">SCORE : <span id="score"></span><br><br><br>taper % pour modifier touches</div>
+
+    
     <div id="plateau"></div>
 </body>
