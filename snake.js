@@ -107,7 +107,7 @@ export function display2(plateau){
         if(index==0){
             const snakePart = document.createElement('div')
             const head = document.createElement('img')
-            head.setAttribute("src", "static/shrek.png")
+            head.setAttribute("src", "static/fiona.png")
             snakePart.style.gridRowStart = segment.y
             snakePart.style.gridColumnStart = segment.x
             snakePart.setAttribute("id","head2")
