@@ -7,7 +7,6 @@ export function UpdateFruit(){
     if (OnSerpentHead(fruit)) {
         ExpandSerpent(AJOUT_CORPS)
         score ++
-        speed += 2
     fruit = getRandomFoodPosition()
     }  
 }
