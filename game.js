@@ -1,4 +1,4 @@
-import {update as UpdateSnake , display as displaySnake, speed,serpentBody, OnSerpent, update2, display2} from "./snake.js"
+import {update as UpdateSnake , display as displaySnake, speed,serpentBody,serpentBody2, OnSerpent, update2, display2} from "./snake.js"
 import { gameStart,setGameStart,index } from "./input.js"
 import { UpdateFruit ,score, draw as drawFood,fruit } from "./fruit.js"
 const plateauJeu = document.getElementById('plateau')
@@ -79,7 +79,7 @@ function update(){
     UpdateFruit()
     UpdateSnake()
     update2()
-    gameOver = deathOnSerpent()
+    gameOver = deathOnSerpent() || deathOnSerpent2()
     
 }
 function display(){
@@ -96,6 +96,10 @@ function display(){
 
 function deathOnSerpent(){
     return OnSerpent(serpentBody[0],{ignoreTete: true})
+}
+
+function deathOnSerpent2(){
+    return OnSerpent(serpentBody2[0],{ignoreTete: true})
 }
 
 function modifyCom(){
